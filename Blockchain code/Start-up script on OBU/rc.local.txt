@@ -1,0 +1,23 @@
+#!/bin/bash
+
+sleep 30
+
+
+cat /mnt/ubi/example1609/aerolink/active/certificates/ieee-v3-demo-root.cert | tee  /root/certs.txt
+
+
+export HOME=/root
+
+
+sshpass -p "duser" scp /root/certs.txt duser@169.254.1.4:/home/duser/Desktop/Certificates/certs.txt
+
+
+
+
+
+
+
+exit 0
+
+
+
